@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "files.eol": "\n" // Força o uso de LF como fim de linha
+  }

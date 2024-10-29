@@ -1,0 +1,28 @@
+service: backend-test
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  stage: dev
+
+plugins:
+  - serverless-offline
+
+functions:
+  api:
+    handler: dist/main.handler
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY
+
+package:
+  exclude:
+    - node_modules/**
+    - src/**
+    - test/**
+    - tsconfig.json
+    - jest.config.js
